@@ -1,0 +1,24 @@
+{
+  "name": "test-swarms",
+  "version": "0.0.1",
+  "description": "automated stress testing for gear contracts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bsv",
+    "bitcoin",
+    "smart",
+    "contracts",
+    "automation",
+    "testing",
+    "swarm"
+  ],
+  "author": "Sean Pollock",
+  "license": "MIT",
+  "dependencies": {
+    "bsv": "^1.0.0",
+    "datapay": "0.0.18"
+  }
+}
