@@ -4,7 +4,8 @@
   "description": "automated stress testing for gear contracts",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "create": "node keys.js",
+    "fund": "node fundBSV.js"
   },
   "keywords": [
     "bsv",

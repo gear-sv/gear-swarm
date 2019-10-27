@@ -26,9 +26,6 @@ const fund = async (master, swarm, amount) => {
       to: sends
     }
   }
-  console.log(tx)
-
-  console.log(sends)
 
   datapay.send(tx, (err, hash) => {
     if (error) console.log(erro)

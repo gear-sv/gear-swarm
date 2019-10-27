@@ -3,12 +3,12 @@ const util = require('util')
 const readFile = util.promisify(require('fs').readFile)
 
 const masterKey = async () => {
-  const keys = await readFile('key.json')
+  const keys = await readFile('../key.json')
   return JSON.parse(keys.toString())
 }
 
 const swarmKeys = async () => {
-  const swarm = await readFile('swarm.json')
+  const swarm = await readFile('../swarm.json')
   return JSON.parse(swarm.toString())
 }
 
@@ -28,13 +28,10 @@ const fund = async (master, swarm, amount) => {
       }
     }
 
-    // console.log(tx)
-    console.log(Date.now())
-
-    // datapay.send(tx, (error, hash) => {
-    //   if (error) console.log(error)
-    //   else console.log(hash)
-    // })
+    datapay.send(tx, (error, hash) => {
+      if (error) console.log(error)
+      else console.log(hash)
+    })
   }
 }
 

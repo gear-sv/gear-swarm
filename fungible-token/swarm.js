@@ -30,10 +30,6 @@ const transact = async (sender, recipient, amount) => {
       fee: 0
     }
   }
-  console.log(Date.now())
-  console.log(counter)
-  console.log(globalCounter)
-  console.log('tx', tx)
 
   datapay.send(tx, (error, hash) => {
     if (error) console.log(error)
@@ -57,7 +53,7 @@ const delay = (mili) => {
 }
 
 (async () => {
-  const swarmFile = await readFile('swarm.json')
+  const swarmFile = await readFile('../swarm.json')
   const swarm = JSON.parse(swarmFile)
   await run(swarm)
 })()
